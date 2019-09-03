@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # jest
 
 ## Project setup
@@ -32,3 +33,7 @@ yarn run test:unit
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+=======
+# Jest
+Jestを用いた、VueComponentの自動テスト用リポジトリ
+>>>>>>> origin/master
