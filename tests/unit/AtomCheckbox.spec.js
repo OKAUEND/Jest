@@ -1,5 +1,5 @@
 import { mount } from '@vue/test-utils'
-import Checkbox from '@/components/AtomCheckbox.vue'
+import Checkbox from '@/components/Atom/Input/AtomCheckbox.vue'
 
 describe('AtomCheckbox.vue',()=>{
     it('Checkをすることができるか',()=>{

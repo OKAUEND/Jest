@@ -1,5 +1,5 @@
 import { mount } from '@vue/test-utils'
-import Input from '@/components/AtomInputText.vue'
+import Input from '@/components/Atom/Input/AtomInputText.vue'
 
 describe('AtomInputText.vue',()=>{
     it('値が入力できるか',()=>{
