@@ -11,9 +11,13 @@ describe('SearchForm.vue',()=>{
     })
 
     test('Buttonが存在するか',()=>{
+        const warpper = shallowMount(SearchForm)
+        expect(warpper.find(atomButton).exists()).toBe(true)
     })
 
     test('inputが存在するか',()=>{
+        const warpper = shallowMount(SearchForm)
+        expect(warpper.find(atomInput).exists()).toBe(true)
     })
     test('クリックしたらemitで親にイベントが通知されるか',()=>{
     })
