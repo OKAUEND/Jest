@@ -20,6 +20,12 @@ describe('SearchForm.vue',()=>{
         expect(warpper.find(atomInput).exists()).toBe(true)
     })
     test('クリックしたらemitで親にイベントが通知されるか',()=>{
+        const warpper = shallowMount(SearchForm)
+        const TEXT = 'TEXT'
+        warpper.setData({InputText:TEXT})
+        warpper.find(atomButton).vm.$emit("onClick")
+        expect(warpper.emitted().change).toBeTruthy()
+        expect(warpper.emitted().change[0][0]).toEqual(TEXT)
     })
 
 })
