@@ -5,6 +5,9 @@ import atomInput from '@/components/Atom/Input/AtomInputText.vue'
 
 describe('SearchForm.vue',()=>{
     test('Dataに値を設定できるか',()=>{
+        const warpper = shallowMount(SearchForm)
+        warpper.setData({InputText:"TEST"})
+        expect(warpper.vm.InputText).toBe("TEST")
     })
 
     test('Buttonが存在するか',()=>{
