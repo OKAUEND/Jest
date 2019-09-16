@@ -104,4 +104,11 @@ describe('ProductionContent.vue',()=>{
         expect(warpper.emitted().change[0][0].ProductionCount).toEqual(ObjectData.ItemData.ProductionCount + 1)
     })
 
+    it('子の配列分のコンポーネントが生成されるか',()=>{
+        const warpper = shallowMount(ProductionCont,{
+            propsData:ObjectData
+        })
+        const childValue = ObjectData.ItemData.ChildItem.length
+        expect(warpper.findAll(ChildrenItem).length).toEqual(childValue)
+    })
 })
