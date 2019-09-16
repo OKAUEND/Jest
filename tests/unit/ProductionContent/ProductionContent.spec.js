@@ -88,5 +88,20 @@ const ObjectData2 = {
     }
 }
 describe('ProductionContent.vue',()=>{
+    it('ボタンをクリックしたら、個数が1個減るか',()=>{
+        const warpper = shallowMount(ProductionCont,{
+            propsData:ObjectData2
+        })
+        warpper.findAll(atomButton).at(0).vm.$emit('onClick')
+        expect(warpper.emitted().change[0][0].ProductionCount).toEqual(ObjectData2.ItemData.ProductionCount - 1)
+    })
+
+    it('ボタンをクリックしたら、個数が1個増えるか',()=>{
+        const warpper = shallowMount(ProductionCont,{
+            propsData:ObjectData
+        })
+        warpper.findAll(atomButton).at(1).vm.$emit('onClick')
+        expect(warpper.emitted().change[0][0].ProductionCount).toEqual(ObjectData.ItemData.ProductionCount + 1)
+    })
 
 })
