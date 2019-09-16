@@ -111,4 +111,10 @@ describe('ProductionContent.vue',()=>{
         const childValue = ObjectData.ItemData.ChildItem.length
         expect(warpper.findAll(ChildrenItem).length).toEqual(childValue)
     })
+    test('画像コンポーネントが表示されるか',()=>{
+        const warpper = shallowMount(ProductionCont,{
+            propsData:ObjectData
+        })
+        expect(warpper.contains(atomImage)).toBe(true)
+    })
 })
